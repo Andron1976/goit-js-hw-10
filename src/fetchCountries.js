@@ -1,8 +1,8 @@
-const inputCountries = '?fields=name,capital,population,flags,languages';
+const listCountries = '?fields=name,capital,population,flags,languages';
 
 export const fetchCountries = name => {
     return fetch(
-        `https://restcountries.com/v3.1/name/${name}${inputCountries}`
+        `https://restcountries.com/v3.1/name/${name}${listCountries}`
     ).then(response => {
      if (!response.ok) {
          throw new Error(response.status);
